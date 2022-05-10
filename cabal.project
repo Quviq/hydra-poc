@@ -39,18 +39,22 @@ package plutus-merkle-tree
 -- Always show detailed output for tests
 test-show-details: direct
 
+-- Should follow cardano-wallet.
+-- Currently tracking v1.34.1.
 source-repository-package
   type: git
-  location: https://github.com/input-output-hk/cardano-node.git
-  tag: 1.34.1
-  --sha256: 1hh53whcj5y9kw4qpkiza7rmkniz18r493vv4dzl1a8r5fy3b2bv
+  location: https://github.com/input-output-hk/cardano-node
+  tag: 2b1d18c6c7b7142d9eebfec34da48840ed4409b6
   subdir:
     cardano-api
+    cardano-cli
     cardano-git-rev
     cardano-node
+    cardano-submit-api
+    cardano-testnet
     trace-dispatcher
-    trace-resources
     trace-forward
+    trace-resources
 
 -- NOTE(SN): These source-repository-package tags are copied from the
 -- 'cardano-node' repository cabal.project at the revision given above. Make
@@ -166,6 +170,7 @@ source-repository-package
     io-classes
     monoidal-synchronisation
     network-mux
+    ntp-client
     ouroboros-consensus
     ouroboros-consensus-byron
     ouroboros-consensus-cardano
@@ -178,6 +183,15 @@ source-repository-package
     typed-protocols
     typed-protocols-cborg
     typed-protocols-examples
+
+-- Should follow cardano-wallet.
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/cardano-addresses
+  tag: 71006f9eb956b0004022e80aadd4ad50d837b621
+  subdir:
+    command-line
+    core
 
 source-repository-package
   type: git
@@ -225,4 +239,40 @@ source-repository-package
   location: https://github.com/input-output-hk/plutus-apps
   tag: 310d848f7ea05884c75be55712ae97ce7579c3bb
   subdir:
+    freer-extras
+    playground-common
+    plutus-chain-index
+    plutus-chain-index-core
     plutus-contract
+    plutus-example
+    plutus-contract-certification
+    plutus-ledger
+    plutus-ledger-constraints
+    plutus-pab
+    plutus-pab-executables
+    plutus-playground-server
+    plutus-use-cases
+    quickcheck-dynamic
+    web-ghc
+
+-- Direct dependency.
+-- Compared to others, cardano-wallet doesn't bump dependencies very often.
+-- Making it a good place to start when bumping dependencies.
+-- As, for example, bumping the node first highly risks breaking API with the wallet.
+-- Unless early bug fixes are required, this is fine as the wallet tracks stable releases of the node.
+-- And it is indeed nice for plutus-apps to track stable releases of the node too.
+source-repository-package
+  type: git
+  location: https://github.com/input-output-hk/cardano-wallet
+  tag: f6d4db733c4e47ee11683c343b440552f59beff7
+  subdir:
+    lib/cli
+    lib/core
+    lib/core-integration
+    lib/dbvar
+    lib/launcher
+    lib/numeric
+    lib/shelley
+    lib/strict-non-empty-containers
+    lib/test-utils
+    lib/text-class
