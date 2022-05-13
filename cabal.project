@@ -45,6 +45,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-node
   tag: 2b1d18c6c7b7142d9eebfec34da48840ed4409b6
+  --sha256: 102pj525ysvj27h9nb8gidxm1cmwp8vpdyfnpwm1ywz3zkpk2mjp
   subdir:
     cardano-api
     cardano-cli
@@ -189,6 +190,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-addresses
   tag: 71006f9eb956b0004022e80aadd4ad50d837b621
+  --sha256: 11dl3fmq7ry5wdmz8kw07ji8yvrxnrsf7pgilw5q9mi4aqyvnaqk
   subdir:
     command-line
     core
@@ -197,8 +199,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus
   tag: 00a6eee2ed318fc2ba46c7672576e692196f2ada
-  -- TODO: this sha is out of date
-  --sha256: 1gnzhns44rzvf9cw84jaqajqqbi9xdcpyy2sapa890vwf796nigv
+  --sha256: 1zfka8bj4zc348pzgriavn0mbz0503x3gb9fv0bfks0d7yx1rvkp
   subdir:
     plutus-core
     plutus-ledger-api
@@ -238,6 +239,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus-apps
   tag: 310d848f7ea05884c75be55712ae97ce7579c3bb
+  --sha256: 0zizfpjaqjgz4l3gh0j3nxzll5apr5jh58p3kgqh8xqnr921dcgl
   subdir:
     freer-extras
     playground-common
@@ -265,6 +267,7 @@ source-repository-package
   type: git
   location: https://github.com/input-output-hk/cardano-wallet
   tag: f6d4db733c4e47ee11683c343b440552f59beff7
+  --sha256: 0gb3zyv3q5v5sd8r29s02yc0brwq5a01is9c0n528391n2r8g1yy
   subdir:
     lib/cli
     lib/core
