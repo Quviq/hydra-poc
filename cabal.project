@@ -198,8 +198,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus
-  tag: 00a6eee2ed318fc2ba46c7672576e692196f2ada
-  --sha256: 1zfka8bj4zc348pzgriavn0mbz0503x3gb9fv0bfks0d7yx1rvkp
+  tag: 4127e9cd6e889824d724c30eae55033cb50cbf3e
+  --sha256: 186w0x7vk8m8npmsfg9pdkxds0rlj6bmhr8nkgn96rkvaz5azjsb
   subdir:
     plutus-core
     plutus-ledger-api
@@ -238,8 +238,8 @@ allow-newer:
 source-repository-package
   type: git
   location: https://github.com/input-output-hk/plutus-apps
-  tag: 310d848f7ea05884c75be55712ae97ce7579c3bb
-  --sha256: 0zizfpjaqjgz4l3gh0j3nxzll5apr5jh58p3kgqh8xqnr921dcgl
+  tag: 7fb0e73765502b9876a78a5d80e993161823a54f
+  --sha256: 1gmsaswf8l8kyl4igjc53jy64yffrfbiz84l7wlf94srk6apfp92
   subdir:
     freer-extras
     playground-common
@@ -253,6 +253,7 @@ source-repository-package
     plutus-pab
     plutus-pab-executables
     plutus-playground-server
+    plutus-script-utils
     plutus-use-cases
     quickcheck-dynamic
     web-ghc

@@ -39,6 +39,8 @@ pkgs.haskell-nix.project {
       # Broken due to haddock errors. Refer to https://github.com/input-output-hk/plutus/blob/master/nix/pkgs/haskell/haskell.nix
       plutus-ledger.doHaddock = false;
       plutus-use-cases.doHaddock = false;
+      plutus-script-utils.doHaddock = false;
+      plutus-contract.doHaddock = false;
     };
 
     # https://github.com/input-output-hk/cardano-wallet/commit/ced95e1b84ce8d9faa53268be45e96701ccc16e9
