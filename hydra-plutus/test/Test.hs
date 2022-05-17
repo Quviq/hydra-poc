@@ -3,7 +3,6 @@ module Main where
 import Hydra.Prelude
 
 import qualified Hydra.ContractModelTest as Model
-import qualified Hydra.ContractTest as Contract
 import Test.Tasty
 
 main :: IO ()
@@ -13,6 +12,5 @@ tests :: TestTree
 tests =
   testGroup
     "Contracts tests"
-    [ Contract.tests
-    , Model.tests
+    [ Model.tests
     ]

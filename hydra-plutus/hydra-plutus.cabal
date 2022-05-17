@@ -138,3 +138,38 @@ executable inspect-script
     , text
 
   ghc-options:    -threaded -rtsopts
+
+
+test-suite hydra-plutus-test
+  import:         project-config
+  type:           exitcode-stdio-1.0
+  main-is:        Test.hs
+  hs-source-dirs: test
+  other-modules:
+    Hydra.ContractModelTest
+
+  build-depends:
+    , base                    >=4.9 && <5
+    , containers
+    , foldl
+    , freer-extras
+    , freer-simple
+    , hydra-plutus
+    , hydra-prelude
+    , io-classes
+    , lens
+    , plutus-contract
+    , plutus-core
+    , plutus-ledger
+    , plutus-tx
+    , plutus-tx-plugin
+    , prettyprinter
+    , QuickCheck
+    , streaming
+    , tasty
+    , tasty-expected-failure
+    , tasty-golden
+    , tasty-hunit
+    , tasty-quickcheck
+    , text
+
