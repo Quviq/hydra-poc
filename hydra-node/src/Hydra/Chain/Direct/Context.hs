@@ -44,7 +44,7 @@ data HydraContext = HydraContext
   , ctxNetworkId :: NetworkId
   , ctxContestationPeriod :: DiffTime
   }
-  deriving (Show)
+  deriving (Show, Eq)
 
 ctxParties :: HydraContext -> [Party]
 ctxParties = fmap deriveParty . ctxHydraSigningKeys
