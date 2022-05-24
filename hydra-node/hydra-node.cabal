@@ -265,6 +265,10 @@ test-suite tests
     Spec
     Test.Hydra.Fixture
     Test.Util
+  build-depends:
+    cardano-api,
+    plutus-chain-index-core,
+    plutus-tx
 
   main-is:            Main.hs
   type:               exitcode-stdio-1.0
