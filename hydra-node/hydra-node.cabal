@@ -245,6 +245,7 @@ test-suite tests
     Hydra.Chain.Direct.WalletSpec
     Hydra.Chain.DirectSpec
     Hydra.ClientInputSpec
+    Hydra.ContractModelTest
     Hydra.CryptoSpec
     Hydra.FireForgetSpec
     Hydra.HeadLogicSpec
@@ -313,12 +314,15 @@ test-suite tests
     , ouroboros-network
     , ouroboros-network-framework
     , plutus-ledger-api
+    , plutus-ledger
     , process
     , QuickCheck
     , quickcheck-instances
     , req
     , silently
     , strict-containers
+    , tasty
+    , tasty-quickcheck
     , temporary
     , text
     , time
