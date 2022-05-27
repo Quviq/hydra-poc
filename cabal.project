@@ -235,7 +235,6 @@ allow-newer:
   size-based:template-haskell
 
 -- This version has to line up with the plutus-core dependency
--- This version has to line up with the plutus-core dependency
 source-repository-package
   location: https://github.com/quviq/plutus-apps
   type: git
@@ -257,7 +256,7 @@ source-repository-package
     plutus-script-utils
     plutus-use-cases
     quickcheck-dynamic
-    web-ghc-- Direct dependency.
+    web-ghc
 -- Compared to others, cardano-wallet doesn't bump dependencies very often.
 -- Making it a good place to start when bumping dependencies.
 -- As, for example, bumping the node first highly risks breaking API with the wallet.
