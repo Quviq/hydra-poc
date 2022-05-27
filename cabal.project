@@ -239,7 +239,7 @@ allow-newer:
 source-repository-package
   location: https://github.com/quviq/plutus-apps
   type: git
-  --sha256: 1gmsaswf8l8kyl4igjc53jy64yffrfbiz84l7wlf94srk6apfp92
+  --sha256: 0301j5ckpkmnralhpnh0h5khjxrgnhysladhigdlv7ybc9l30cxd
   tag: 04abe96af16baf283de9438882743cf1dd0ed3e7
   subdir:
     freer-extras
