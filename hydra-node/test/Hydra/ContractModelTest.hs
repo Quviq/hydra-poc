@@ -2,6 +2,7 @@
 {-# LANGUAGE ViewPatterns #-}
 {-# OPTIONS_GHC -Wno-deferred-type-errors #-}
 {-# OPTIONS_GHC -Wno-incomplete-uni-patterns #-}
+{-# OPTIONS_GHC -Wwarn #-}
 
 module Hydra.ContractModelTest where
 

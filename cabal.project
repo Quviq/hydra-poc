@@ -236,10 +236,10 @@ allow-newer:
 
 -- This version has to line up with the plutus-core dependency
 source-repository-package
-  location: https://github.com/quviq/plutus-apps
+  location: https://github.com/input-output-hk/plutus-apps
   type: git
-  --sha256: 0301j5ckpkmnralhpnh0h5khjxrgnhysladhigdlv7ybc9l30cxd
-  tag: 04abe96af16baf283de9438882743cf1dd0ed3e7
+  --sha256: 0zxp7bmvrxb66z178ypxzy5q4ydylfmk231yzbh0jgplhvlizxqk
+  tag: 700c58222db34ad9ccbf0745ca4593fd70f1a275
   subdir:
     freer-extras
     playground-common
