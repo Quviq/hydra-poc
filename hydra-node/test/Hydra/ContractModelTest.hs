@@ -108,38 +108,6 @@ instance ContractModel HydraModel where
 deriving instance Eq (ContractInstanceKey HydraModel w schema err params)
 deriving instance Show (ContractInstanceKey HydraModel w schema err params)
 
--- -- This is not the right thing to do!
--- toEmulatorTx :: Ledger.SomeCardanoApiTx -> Ledger.Tx
--- toEmulatorTx (Ledger.SomeTx tx era) = fromChainTx $ either (error . Prelude.show) id $ fromCardanoTx era tx
---   where
---     fromChainTx tx = Ledger.Tx
---       { Ledger.txInputs      = tx ^. citxInputs
---       , Ledger.txCollateral  = error "todo"
---       , Ledger.txOutputs     = tx ^. citxOutputs
---       , Ledger.txMint        = mempty
---       , Ledger.txFee         = mempty
---       , Ledger.txValidRange  = tx ^. citxValidRange
---       , Ledger.txMintScripts = mempty
---       , Ledger.txSignatures  = error "todo"
---       , Ledger.txRedeemers   = tx ^. citxRedeemers
---       , Ledger.txData        = tx ^. citxData
---       }
---     -- _citxTxId       :: TxId,
---     -- -- ^ The id of this transaction.
---     -- _citxInputs     :: Set TxIn,
---     -- -- ^ The inputs to this transaction.
---     -- _citxOutputs    :: ChainIndexTxOutputs,
---     -- -- ^ The outputs of this transaction, ordered so they can be referenced by index.
---     -- _citxValidRange :: !SlotRange,
---     -- -- ^ The 'SlotRange' during which this transaction may be validated.
---     -- _citxData       :: Map DatumHash Datum,
---     -- -- ^ Datum objects recorded on this transaction.
---     -- _citxRedeemers  :: Map RedeemerHash Redeemer,
---     -- -- ^ Redeemers of the minting scripts.
---     -- _citxScripts    :: Map ScriptHash Script,
---     -- -- ^ The scripts (validator, stake validator or minting) part of cardano tx.
---     -- _citxCardanoTx  :: Maybe SomeCardanoApiTx
-
 hydraContract :: (HydraContext, OnChainHeadState 'StIdle) -> Contract () Schema ContractError ()
 hydraContract (ctx, st) = loop (SomeOnChainHeadState st)
   where
